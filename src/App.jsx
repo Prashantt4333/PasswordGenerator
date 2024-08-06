@@ -27,10 +27,10 @@ function App() {
     PasswordRef.current.select()
     window.navigator.clipboard.writeText(password)
   },[password])
-
+  
   useEffect(()=>{
     passwordGenerator()
-  },[length, numberAllow, charAllow, setPassword])
+  }, [passwordGenerator])
 
   return (
     <>
